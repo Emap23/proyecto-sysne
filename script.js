@@ -28,7 +28,7 @@ const datosVistas = {
         banner: "img/IMAGENES/INFRACCION DIGITAL/apaisada_infraccion",
         circulo: "img/IMAGENES/INFRACCION DIGITAL/circular_infraccion.webp",
         titulo: "Infracción Digital",
-        subtitulo: "SCP Infracción Digital",
+        subtitulo: "SCP Infracción Digitallllllllll",
         descripcion: "Modernización del proceso de sanciones con tecnología móvil y transparencia total.",
         detalle1: "Automatiza la gestión de infracciones, reduciendo costos y mejorando los tiempos de llenado y la transparencia de las mismas.",
         detalle2: "Se integra fácilmente con sistemas existentes ya que es adaptable y escalable."
@@ -329,3 +329,4 @@ window.addEventListener('scroll', () => {
         else header.classList.remove('scrolled');
     }
 });
+
