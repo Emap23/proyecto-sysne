@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sysne - Ciberseguridad y Soluciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo" onclick="volverInicio()">
+                <img src="img/logoheader.svg" alt="Sysne Logo"> 
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Soluciones <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="menu-highlight">SOLUCIÓN SYSNE</li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('scp')">Sistema de Control Policial (SCP)</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('infraccion')">Infracción digital</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('investigacion')">Policía de Investigación</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('inteligencia')">Plataforma de Inteligencia</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('cautelares')">Medidas cautelares</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('visitas')">Control de Visitas</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('lpr_sol')">Plataforma Inteligencia LPR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Servicios <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="menu-highlight">SERVICIOS SYSNE</li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('ciberseguridad')">Ciberseguridad</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('transcripcion')">Transcripción</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('mantenimiento')">Mantenimiento (PM)</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('tacticos_imp')">Implementación de tácticos</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('desarrollo')">Desarrollo de sistemas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Equipamiento <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="menu-highlight">EQUIPAMIENTO SYSNE</li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('forensia')">Forensia digital</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('tactico_eq')">Equipamiento táctico</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('lpr_sistemas')">Sistemas LPR</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('areas')">Plataforma Áreas</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('acceso')">Control de acceso</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('moviles')">Dispositivos móviles</a></li>
+                        <li><a href="javascript:void(0)" onclick="cargarVista('pmi')">PMI</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)" onclick="cargarVista('uvm')">Traje UVM</a></li>
+                <li><a href="#contacto" onclick="volverInicio()">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="vista-inicio">
+        <section class="hero-principal">
+            <div class="hero-content">
+                <p class="hero-sub">BIENVENIDO A TU COMPAÑÍA</p>
+                <h1>Productos de <br>Ciberseguridad</h1>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="cards-container">
+                <div class="card" onclick="cargarVista('inteligencia')">
+                    <div class="card-img"><img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Data"></div>
+                    <div class="card-text">
+                        <h3>CIENCIA DE DATOS</h3>
+                        <p>Detecta patrones, optimiza recursos y visualiza la realidad con precisión.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="cargarVista('tactico_eq')">
+                    <div class="card-img"><img src="https://images.pexels.com/photos/1034812/pexels-photo-1034812.jpeg" alt="PTT"></div>
+                    <div class="card-text">
+                        <h3>SISTEMA PTT</h3>
+                        <p>Conecta equipos de campo al instante con dispositivos robustos.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="cargarVista('forensia')">
+                    <div class="card-img"><img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" alt="Forensics"></div>
+                    <div class="card-text">
+                        <h3>FORENSIA DIGITAL</h3>
+                        <p>Análisis forense avanzado para encontrar evidencia digital de manera segura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <img src="img/icon 4.png" class="stat-icon">
+            <h2 class="stat-number" data-target="8000">+8000</h2>
+            <p>Dispositivos Tecnológicos</p>
+        </div>
+        <div class="stat-item">
+            <img src="img/icon 3.png" class="stat-icon">
+            <h2 class="stat-number" data-target="180">+180</h2>
+            <p>Centros de Mando</p>
+        </div>
+        <div class="stat-item">
+            <img src="img/icon 2.png" class="stat-icon">
+            <h2 class="stat-number" data-target="180">+180</h2>
+            <p>Módulos SCP Supervisión</p>
+        </div>
+        <div class="stat-item">
+            <img src="img/icon 1.png" class="stat-icon">
+            <h2 class="stat-number" data-target="24000">+24000</h2>
+            <p>Elementos Capacitados</p>
+        </div>
+    </div>
+            <div class="map-container">
+                <img src="img/mapa.webp" alt="Mapa de México">
+            </div>
+        </section>
+
+        <div id="contenedor-formulario-inicio"></div>
+    </main>
+
+    <div id="vista-detalle" style="display:none; opacity: 0;">
+        <div id="contenido-dinamico"></div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="img/logofooter.svg" alt="Logo Sysne" class="footer-logo">
+                <div class="copyright-box">
+                    <p>© Copyright Sysne. <br>Derechos Reservados</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h4>Automatización Sysne de México</h4>
+                <div class="contact-item"><i class="fa-solid fa-phone"></i> <span>222 970 39 85</span></div>
+                <div class="contact-item"><i class="fa-solid fa-envelope"></i> <span>contacto@sysne.com.mx</span></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

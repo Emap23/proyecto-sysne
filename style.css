@@ -1,0 +1,133 @@
+:root {
+    --azul-oscuro: #0a1a2b;
+    --azul-fondo: #131b23;
+    --celeste: #5fa8d3;
+    --blanco: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--blanco); overflow-x: hidden; }
+
+/* HEADER */
+header { background: var(--azul-oscuro); padding: 20px 5%; position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+.logo img { height: 45px; cursor: pointer; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+
+/* DROPDOWN */
+.dropdown { position: relative; }
+.dropdown-menu { 
+    position: absolute; top: 100%; left: 0; background: white; min-width: 250px; 
+    display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-top: 3px solid var(--celeste);
+}
+.dropdown:hover .dropdown-menu { display: block; }
+.menu-highlight { padding: 10px 20px; background: var(--azul-oscuro); color: var(--celeste); font-weight: 800; font-size: 10px; }
+.dropdown-menu li a { color: #333; padding: 10px 20px; display: block; border-bottom: 1px solid #eee; }
+
+/* HERO INICIO - NÍTIDO */
+.hero-principal { 
+    height: 75vh; 
+    background-image: url('img/headerslideprincipal.webp');
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    align-items: center; 
+    padding-left: 10%; 
+    color: white;
+    position: relative;
+    filter: brightness(1); /* Asegura brillo natural */
+}
+
+/* Overlay suave: Solo oscurece el lado izquierdo para que el texto sea legible */
+.hero-principal::before {
+    content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
+    background: linear-gradient(to right, rgba(10, 26, 43, 0.6) 0%, rgba(10, 26, 43, 0) 60%);
+    z-index: 1;
+}
+.hero-content { position: relative; z-index: 2; }
+.hero-principal h1 { font-size: clamp(40px, 6vw, 75px); font-weight: 800; }
+
+/* CARDS */
+.cards-section { margin-top: -80px; padding: 0 5%; position: relative; z-index: 10; }
+.cards-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer; transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.card-img img { width: 100%; height: 200px; object-fit: cover; }
+.card-text { padding: 25px; }
+
+/* ESTADÍSTICAS - AJUSTE PARA ANIMACIÓN */
+.stats-section { padding: 80px 10%; background: var(--azul-oscuro); color: white; text-align: center; }
+.stats-grid { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; 
+    max-width: 1200px; margin: 0 auto 50px auto; 
+}
+.stat-item { display: flex; flex-direction: column; align-items: center; }
+.stat-icon { width: 55px; height: 55px; margin-bottom: 15px; }
+
+.stat-item h2 { 
+    color: var(--celeste); 
+    font-size: 32px; 
+    font-weight: 800; 
+    min-width: 150px; /* Evita que el layout salte durante el conteo */
+    display: inline-block;
+    font-variant-numeric: tabular-nums; /* Mantiene el ancho de los números constante */
+}
+.stat-item p { font-size: 12px; text-transform: uppercase; opacity: 0.8; margin-top: 5px; }
+
+.map-container { width: 100%; max-width: 850px; margin: 0 auto; }
+.map-container img { width: 100%; height: auto; }
+
+/* VISTA PRODUCTO DINÁMICO - COLOR NATURAL */
+.prod-hero { 
+    height: 55vh; 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    align-items: center; 
+    padding: 0 10%; 
+    position: relative; 
+    color: white; 
+    filter: brightness(1); /* Color real */
+}
+
+/* Reducimos la opacidad del overlay para que no se vea gris/opaco */
+.prod-hero::before { 
+    content:''; 
+    position:absolute; 
+    top:0; left:0; right:0; bottom:0; 
+    background: linear-gradient(90deg, rgba(10, 26, 43, 0.7) 0%, rgba(10, 26, 43, 0.1) 100%); 
+    z-index: 1;
+}
+
+.prod-hero-content { position: relative; z-index: 2; }
+.prod-content-dual { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.box-detalle { background: #f9f9f9; padding: 30px; border-left: 5px solid var(--celeste); margin-top: 25px; border-radius: 8px; color: #333; }
+.circular-img { width: 100%; max-width: 450px; border-radius: 50%; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* FORMULARIO */
+.project-form-section { padding: 80px 10%; background: #fff; }
+.blue-container { 
+    background: linear-gradient(135deg, #5fa8d3, #4a8eb8); padding: 50px; border-radius: 25px;
+    display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; color: white; align-items: center;
+}
+.form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-fields input, .form-fields select, .form-fields textarea { padding: 12px; border-radius: 8px; border: none; width: 100%; }
+.form-fields textarea { grid-column: span 2; }
+.btn-submit { grid-column: span 2; padding: 15px; background: var(--azul-oscuro); color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+
+/* FOOTER */
+footer { background: var(--azul-oscuro); color: white; padding: 60px 10%; }
+.footer-container { display: flex; justify-content: space-between; }
+.footer-right { text-align: right; }
+.social-icons { display: flex; gap: 15px; justify-content: flex-end; margin-top: 15px; }
+.social-icons a { color: white; font-size: 18px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .prod-content-dual, .blue-container, .footer-container { grid-template-columns: 1fr; text-align: center; }
+    .footer-right { text-align: center; margin-top: 30px; }
+    .social-icons { justify-content: center; }
+    .stat-item h2 { min-width: auto; }
+}
